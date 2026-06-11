@@ -13,8 +13,8 @@ namespace InvoiceTotal
             decimal subtotal = Decimal.Parse(txtSubtotal.Text);
             //decimal subtotal = Convert.ToDecimal(txtSubtotal.Text);
             decimal discountPct = .25m;
-            decimal discountAmt = subtotal * discountPct;
-            decimal invoiceTotal = subtotal - discountAmt;
+            decimal discountAmt = Decimal.Round(subtotal * discountPct);
+            decimal invoiceTotal = Decimal.Round(subtotal - discountAmt);
 
             txtDiscountPct.Text = discountPct.ToString("p1");
             txtDiscountAmt.Text = discountAmt.ToString("c");
