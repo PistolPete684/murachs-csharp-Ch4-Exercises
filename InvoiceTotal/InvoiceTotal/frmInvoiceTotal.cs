@@ -9,7 +9,9 @@ namespace InvoiceTotal
 
         private void btnCalculate_Click(object sender, EventArgs e)
         {
-            decimal subtotal = Convert.ToDecimal(txtSubtotal.Text);
+            // Changed Convert.ToDecimal() -> Decimal.Parse()
+            decimal subtotal = Decimal.Parse(txtSubtotal.Text);
+            //decimal subtotal = Convert.ToDecimal(txtSubtotal.Text);
             decimal discountPct = .25m;
             decimal discountAmt = subtotal * discountPct;
             decimal invoiceTotal = subtotal - discountAmt;
