@@ -7,6 +7,10 @@ namespace InvoiceTotal
             InitializeComponent();
         }
 
+        int numberOfInvoices = 0;
+        decimal totalInvoices = 0;
+        decimal avgOfInvoices = 0;
+
         private void btnCalculate_Click(object sender, EventArgs e)
         {
             decimal subtotal = Decimal.Parse(txtSubtotal.Text);
