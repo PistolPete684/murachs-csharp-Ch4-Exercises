@@ -38,12 +38,12 @@
             txtTotal = new TextBox();
             btnCalculate = new Button();
             btnExit = new Button();
-            txtNumberOfInvoices = new Label();
-            txtTotalOfInvoices = new Label();
-            txtAverageOfInvoices = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
+            lblNumberOfInvoices = new Label();
+            lblTotalOfInvoices = new Label();
+            lblAverageOfInvoices = new Label();
+            txtNumberOfInvoices = new TextBox();
+            txtTotalOfInvoices = new TextBox();
+            txtAverageOfInvoices = new TextBox();
             btnClear = new Button();
             SuspendLayout();
             // 
@@ -147,53 +147,56 @@
             btnExit.UseVisualStyleBackColor = true;
             btnExit.Click += btnExit_Click;
             // 
+            // lblNumberOfInvoices
+            // 
+            lblNumberOfInvoices.AutoSize = true;
+            lblNumberOfInvoices.Location = new Point(406, 43);
+            lblNumberOfInvoices.Name = "lblNumberOfInvoices";
+            lblNumberOfInvoices.Size = new Size(141, 20);
+            lblNumberOfInvoices.TabIndex = 8;
+            lblNumberOfInvoices.Text = "Number of invoices:";
+            // 
+            // lblTotalOfInvoices
+            // 
+            lblTotalOfInvoices.AutoSize = true;
+            lblTotalOfInvoices.Location = new Point(406, 86);
+            lblTotalOfInvoices.Name = "lblTotalOfInvoices";
+            lblTotalOfInvoices.Size = new Size(120, 20);
+            lblTotalOfInvoices.TabIndex = 9;
+            lblTotalOfInvoices.Text = "Total of invoices:";
+            // 
+            // lblAverageOfInvoices
+            // 
+            lblAverageOfInvoices.AutoSize = true;
+            lblAverageOfInvoices.Location = new Point(406, 133);
+            lblAverageOfInvoices.Name = "lblAverageOfInvoices";
+            lblAverageOfInvoices.Size = new Size(134, 20);
+            lblAverageOfInvoices.TabIndex = 10;
+            lblAverageOfInvoices.Text = "Averge of invoices:";
+            // 
             // txtNumberOfInvoices
             // 
-            txtNumberOfInvoices.AutoSize = true;
-            txtNumberOfInvoices.Location = new Point(406, 43);
+            txtNumberOfInvoices.Location = new Point(580, 36);
             txtNumberOfInvoices.Name = "txtNumberOfInvoices";
-            txtNumberOfInvoices.Size = new Size(143, 20);
-            txtNumberOfInvoices.TabIndex = 8;
-            txtNumberOfInvoices.Text = "Number O fInvoices:";
+            txtNumberOfInvoices.ReadOnly = true;
+            txtNumberOfInvoices.Size = new Size(125, 27);
+            txtNumberOfInvoices.TabIndex = 11;
             // 
             // txtTotalOfInvoices
             // 
-            txtTotalOfInvoices.AutoSize = true;
-            txtTotalOfInvoices.Location = new Point(406, 86);
+            txtTotalOfInvoices.Location = new Point(580, 86);
             txtTotalOfInvoices.Name = "txtTotalOfInvoices";
-            txtTotalOfInvoices.Size = new Size(120, 20);
-            txtTotalOfInvoices.TabIndex = 9;
-            txtTotalOfInvoices.Text = "Total of invoices:";
+            txtTotalOfInvoices.ReadOnly = true;
+            txtTotalOfInvoices.Size = new Size(125, 27);
+            txtTotalOfInvoices.TabIndex = 12;
             // 
             // txtAverageOfInvoices
             // 
-            txtAverageOfInvoices.AutoSize = true;
-            txtAverageOfInvoices.Location = new Point(406, 133);
+            txtAverageOfInvoices.Location = new Point(580, 133);
             txtAverageOfInvoices.Name = "txtAverageOfInvoices";
-            txtAverageOfInvoices.Size = new Size(134, 20);
-            txtAverageOfInvoices.TabIndex = 10;
-            txtAverageOfInvoices.Text = "Averge of invoices:";
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(580, 36);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(125, 27);
-            textBox1.TabIndex = 11;
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(580, 86);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(125, 27);
-            textBox2.TabIndex = 12;
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(580, 133);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(125, 27);
-            textBox3.TabIndex = 13;
+            txtAverageOfInvoices.ReadOnly = true;
+            txtAverageOfInvoices.Size = new Size(125, 27);
+            txtAverageOfInvoices.TabIndex = 13;
             // 
             // btnClear
             // 
@@ -212,12 +215,12 @@
             CancelButton = btnExit;
             ClientSize = new Size(750, 241);
             Controls.Add(btnClear);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
             Controls.Add(txtAverageOfInvoices);
             Controls.Add(txtTotalOfInvoices);
             Controls.Add(txtNumberOfInvoices);
+            Controls.Add(lblAverageOfInvoices);
+            Controls.Add(lblTotalOfInvoices);
+            Controls.Add(lblNumberOfInvoices);
             Controls.Add(btnExit);
             Controls.Add(btnCalculate);
             Controls.Add(txtTotal);
@@ -249,12 +252,12 @@
         private TextBox txtTotal;
         private Button btnCalculate;
         private Button btnExit;
-        private Label txtNumberOfInvoices;
-        private Label txtTotalOfInvoices;
-        private Label txtAverageOfInvoices;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
+        private Label lblNumberOfInvoices;
+        private Label lblTotalOfInvoices;
+        private Label lblAverageOfInvoices;
+        private TextBox txtNumberOfInvoices;
+        private TextBox txtTotalOfInvoices;
+        private TextBox txtAverageOfInvoices;
         private Button btnClear;
     }
 }

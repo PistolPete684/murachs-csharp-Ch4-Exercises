@@ -22,6 +22,14 @@ namespace InvoiceTotal
             txtDiscountAmt.Text = discountAmt.ToString("c");
             txtTotal.Text = invoiceTotal.ToString("c");
 
+            numberOfInvoices++;
+            totalInvoices = totalInvoices + invoiceTotal;
+            avgOfInvoices = totalInvoices / numberOfInvoices;
+
+            txtNumberOfInvoices.Text = numberOfInvoices.ToString();
+            txtTotalOfInvoices.Text = totalInvoices.ToString("c");
+            txtAverageOfInvoices.Text = avgOfInvoices.ToString("c");
+
             txtSubtotal.Focus();
         }
 
