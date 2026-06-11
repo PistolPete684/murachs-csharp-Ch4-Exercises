@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            txtSubtotal = new TextBox();
+            txtEnterSubtotal = new TextBox();
             label2 = new Label();
             txtDiscountPct = new TextBox();
             label3 = new Label();
@@ -45,6 +45,8 @@
             txtTotalOfInvoices = new TextBox();
             txtAverageOfInvoices = new TextBox();
             btnClear = new Button();
+            lblSubtotal = new Label();
+            txtSubtotal = new TextBox();
             SuspendLayout();
             // 
             // label1
@@ -57,18 +59,18 @@
             label1.Text = "&Subtotal:";
             label1.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // txtSubtotal
+            // txtEnterSubtotal
             // 
-            txtSubtotal.Location = new Point(150, 20);
-            txtSubtotal.Margin = new Padding(3, 4, 3, 4);
-            txtSubtotal.Name = "txtSubtotal";
-            txtSubtotal.Size = new Size(114, 27);
-            txtSubtotal.TabIndex = 1;
+            txtEnterSubtotal.Location = new Point(150, 20);
+            txtEnterSubtotal.Margin = new Padding(3, 4, 3, 4);
+            txtEnterSubtotal.Name = "txtEnterSubtotal";
+            txtEnterSubtotal.Size = new Size(114, 27);
+            txtEnterSubtotal.TabIndex = 1;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(24, 63);
+            label2.Location = new Point(24, 108);
             label2.Name = "label2";
             label2.Size = new Size(122, 20);
             label2.TabIndex = 2;
@@ -77,7 +79,7 @@
             // 
             // txtDiscountPct
             // 
-            txtDiscountPct.Location = new Point(150, 59);
+            txtDiscountPct.Location = new Point(150, 104);
             txtDiscountPct.Margin = new Padding(3, 4, 3, 4);
             txtDiscountPct.Name = "txtDiscountPct";
             txtDiscountPct.ReadOnly = true;
@@ -88,7 +90,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(24, 101);
+            label3.Location = new Point(24, 146);
             label3.Name = "label3";
             label3.Size = new Size(127, 20);
             label3.TabIndex = 4;
@@ -97,7 +99,7 @@
             // 
             // txtDiscountAmt
             // 
-            txtDiscountAmt.Location = new Point(150, 97);
+            txtDiscountAmt.Location = new Point(150, 142);
             txtDiscountAmt.Margin = new Padding(3, 4, 3, 4);
             txtDiscountAmt.Name = "txtDiscountAmt";
             txtDiscountAmt.ReadOnly = true;
@@ -108,7 +110,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(24, 140);
+            label4.Location = new Point(24, 185);
             label4.Name = "label4";
             label4.Size = new Size(45, 20);
             label4.TabIndex = 6;
@@ -117,7 +119,7 @@
             // 
             // txtTotal
             // 
-            txtTotal.Location = new Point(150, 136);
+            txtTotal.Location = new Point(150, 181);
             txtTotal.Margin = new Padding(3, 4, 3, 4);
             txtTotal.Name = "txtTotal";
             txtTotal.ReadOnly = true;
@@ -127,7 +129,7 @@
             // 
             // btnCalculate
             // 
-            btnCalculate.Location = new Point(233, 196);
+            btnCalculate.Location = new Point(212, 274);
             btnCalculate.Margin = new Padding(3, 4, 3, 4);
             btnCalculate.Name = "btnCalculate";
             btnCalculate.Size = new Size(86, 31);
@@ -138,7 +140,7 @@
             // 
             // btnExit
             // 
-            btnExit.Location = new Point(496, 197);
+            btnExit.Location = new Point(475, 275);
             btnExit.Margin = new Padding(3, 4, 3, 4);
             btnExit.Name = "btnExit";
             btnExit.Size = new Size(86, 31);
@@ -200,12 +202,29 @@
             // 
             // btnClear
             // 
-            btnClear.Location = new Point(355, 198);
+            btnClear.Location = new Point(334, 276);
             btnClear.Name = "btnClear";
             btnClear.Size = new Size(94, 29);
             btnClear.TabIndex = 14;
             btnClear.Text = "Clear";
             btnClear.UseVisualStyleBackColor = true;
+            // 
+            // lblSubtotal
+            // 
+            lblSubtotal.AutoSize = true;
+            lblSubtotal.Location = new Point(24, 67);
+            lblSubtotal.Name = "lblSubtotal";
+            lblSubtotal.Size = new Size(68, 20);
+            lblSubtotal.TabIndex = 15;
+            lblSubtotal.Text = "Subtotal:";
+            // 
+            // txtSubtotal
+            // 
+            txtSubtotal.Location = new Point(150, 64);
+            txtSubtotal.Name = "txtSubtotal";
+            txtSubtotal.ReadOnly = true;
+            txtSubtotal.Size = new Size(125, 27);
+            txtSubtotal.TabIndex = 16;
             // 
             // frmInvoiceTotal
             // 
@@ -213,7 +232,9 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             CancelButton = btnExit;
-            ClientSize = new Size(750, 241);
+            ClientSize = new Size(750, 328);
+            Controls.Add(txtSubtotal);
+            Controls.Add(lblSubtotal);
             Controls.Add(btnClear);
             Controls.Add(txtAverageOfInvoices);
             Controls.Add(txtTotalOfInvoices);
@@ -229,7 +250,7 @@
             Controls.Add(label3);
             Controls.Add(txtDiscountPct);
             Controls.Add(label2);
-            Controls.Add(txtSubtotal);
+            Controls.Add(txtEnterSubtotal);
             Controls.Add(label1);
             Margin = new Padding(3, 4, 3, 4);
             Name = "frmInvoiceTotal";
@@ -243,7 +264,7 @@
         #endregion
 
         private Label label1;
-        private TextBox txtSubtotal;
+        private TextBox txtEnterSubtotal;
         private Label label2;
         private TextBox txtDiscountPct;
         private Label label3;
@@ -259,5 +280,7 @@
         private TextBox txtTotalOfInvoices;
         private TextBox txtAverageOfInvoices;
         private Button btnClear;
+        private Label lblSubtotal;
+        private TextBox txtSubtotal;
     }
 }
