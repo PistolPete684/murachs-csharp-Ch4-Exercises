@@ -40,5 +40,19 @@ namespace InvoiceTotal
         {
             this.Close();
         }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtSubtotal.Text = "";
+            txtDiscountPct.Text = "";
+            txtDiscountAmt.Text = "";
+            txtTotal.Text = "";
+            txtNumberOfInvoices.Text = "";
+            txtTotalOfInvoices.Text = "";
+            txtAverageOfInvoices.Text = "";
+
+            txtEnterSubtotal.Focus();
+
+        }
     }
 }
